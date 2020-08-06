@@ -5,7 +5,7 @@
     },
     "GetAllTodoFunction": {
         "ENDPOINT_OVERRIDE": "http://docker.for.mac.localhost:8000",
-        "TABLE_NAME": "TodoTable"
+        "TABLE_NAME": "changes-table"
     },
     "CompleteTodoFunction": {
         "ENDPOINT_OVERRIDE": "http://docker.for.mac.localhost:8000",
@@ -13,7 +13,7 @@
     },
     "AddTodoFunction": {
         "ENDPOINT_OVERRIDE": "http://docker.for.mac.localhost:8000",
-        "TABLE_NAME": "TodoTable"
+        "TABLE_NAME": "products-table"
     },
     "UpdateTodoFunction": {
         "ENDPOINT_OVERRIDE": "http://docker.for.mac.localhost:8000",
@@ -21,7 +21,7 @@
     },
     "DeleteTodoFunction": {
         "ENDPOINT_OVERRIDE": "http://docker.for.mac.localhost:8000",
-        "TABLE_NAME": "TodoTable"
+        "TABLE_NAME": "changes-table"
     }
 
     

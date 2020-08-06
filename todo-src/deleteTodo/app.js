@@ -35,10 +35,10 @@ function deleteRecordById(recordId) {
     let params = {
         TableName: TABLE_NAME,
         Key: {
-            "id": recordId
+            "ERP": recordId
         }
     }
-
+    console.log(params)
     return docClient.delete(params)
 }
 
@@ -60,6 +60,7 @@ exports.deleteToDoItem =
                 metrics.putMetric("Success", 1, Unit.Count)
                 return response(200, data)
             } catch (err) {
+                console.log(err)
                 metrics.putMetric("Error", 1, Unit.Count)
                 return response(400, { message: err.message })
             }

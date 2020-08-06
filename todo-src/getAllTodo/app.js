@@ -25,10 +25,10 @@ const response = (statusCode, body, additionalHeaders) => ({
 })
 
 function getRecords() {
+   
     let params = {
         TableName: TABLE_NAME,
     }
-
     return docClient.scan(params)
 }
 
@@ -36,11 +36,14 @@ function getRecords() {
 exports.getAllToDoItem =
     metricScope(metrics =>
         async (event, context, callback) => {
+            console.log(TABLE_NAME)
+           
             metrics.setNamespace('TodoApp')
             metrics.putDimensions({Service: "getAllTodo"})
             metrics.setProperty("RequestId", context.requestId)
 
             try {
+                
                 let data = await getRecords().promise()
                 metrics.putMetric("Success", 1, Unit.Count)
                 return response(200, data)

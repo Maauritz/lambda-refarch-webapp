@@ -92,9 +92,18 @@ Resources:
     Type: AWS::Serverless::SimpleTable
     Properties:
       PrimaryKey:
-          Name: id
+          Name: ERP
           Type: String
-      TableName: !Join ['-', [todo-table, !Ref AWS::StackName]]
+      TableName: !Join ['-', [changes-table, !Ref AWS::StackName]]
+      SSESpecification:
+        SSEEnabled: true
+  ProductsTable:
+    Type: AWS::Serverless::SimpleTable
+    Properties:
+      PrimaryKey:
+          Name: ERP
+          Type: String
+      TableName: !Join ['-', [products-table, !Ref AWS::StackName]]
       SSESpecification:
         SSEEnabled: true
 

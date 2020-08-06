@@ -31,6 +31,7 @@ function isValidRequest(context, event) {
 
 function addRecord(event) {
     // auto generated date fields
+    console.log('LAMDBDAAAA')
     let d = new Date()
     let dISO = d.toISOString()
     let auto_fields = {
@@ -66,6 +67,7 @@ exports.addToDoItem =
 
             try {
                 let data = await addRecord(event).promise()
+                console.log("DATAAA==="+JSON.stringify(data))
                 metrics.putMetric("Success", 1, Unit.Count)
                 return response(200, data)
             } catch (err) {
