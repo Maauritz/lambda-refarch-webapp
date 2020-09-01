@@ -3,9 +3,16 @@
 
 const config = {
   "aws_user_pools_web_client_id": "16pvu6gaqadf4cjrmd1qgi1btg",     // CognitoClientID
-  "api_base_url": "https://eiujak051j.execute-api.eu-west-1.amazonaws.com/prod",                                     // TodoFunctionApi
+  "api_base_url": "http://127.0.0.1:3000",                                     // TodoFunctionApi
   "coginto_hosted_domain": "mytodoappdemo-serverless-stack.auth.eu-west-1.amazoncognito.com",                   // CognitoDomainName
-  "redirect_url": "https://master.d19ytbicxmt7i9.amplifyapp.com"                                      // AmplifyURL
+  "redirect_url": "http://localhost:8080"                                      // AmplifyURL
 };
+
+// const config = {
+//   "aws_user_pools_web_client_id": "16pvu6gaqadf4cjrmd1qgi1btg",     // CognitoClientID
+//   "api_base_url": "https://eiujak051j.execute-api.eu-west-1.amazonaws.com/prod",                                     // TodoFunctionApi
+//   "coginto_hosted_domain": "mytodoappdemo-serverless-stack.auth.eu-west-1.amazoncognito.com",                   // CognitoDomainName
+//   "redirect_url": "https://master.d19ytbicxmt7i9.amplifyapp.com"                                      // AmplifyURL
+// };
 
 export default config;
