@@ -220,7 +220,7 @@ Resources:
       Tracing: Active
       Policies:
         - DynamoDBCrudPolicy:
-            TableName: !Ref TodoTable
+            TableName: !Ref ProductsTable
         - CloudWatchPutMetricPolicy: {}
       Environment:
         Variables:

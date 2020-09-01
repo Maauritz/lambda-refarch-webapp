@@ -72,6 +72,7 @@ exports.addToDoItem =
                 return response(200, data)
             } catch (err) {
                 metrics.putMetric("Error", 1, Unit.Count)
+                console.log(err)
                 return response(400, { message: err.message })
             }
         }
