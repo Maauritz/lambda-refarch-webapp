@@ -224,7 +224,7 @@ Resources:
         - CloudWatchPutMetricPolicy: {}
       Environment:
         Variables:
-          TABLE_NAME: !Ref TodoTable
+          TABLE_NAME: !Ref ProductsTable
           AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1"
           ENDPOINT_OVERRIDE: ""
 
