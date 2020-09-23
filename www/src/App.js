@@ -24,7 +24,6 @@ function App() {
     getIdToken();
     if (idToken.length > 0) {
       getAllTodos();
-      //getAllProducts();
     }
   }, [idToken]);
 
@@ -64,6 +63,7 @@ function App() {
 
   const getAllTodos = async () => {
     console.log("GETTING ALL TODOS")
+    console.log(config.api_base_url)
     console.log(`${config.api_base_url}/item/`)
     const result = await axios({
       url: `${config.api_base_url}/item/`,
@@ -73,12 +73,11 @@ function App() {
     }).catch(error => {
       console.log(error);
     });
-    console.log(result)
+    //console.log(result)
 
     if (result && result.status === 401) {
       //clearCredentials();
     } else if (result && result.status === 200) {
-      console.log(result.data.Items);
       setToDos(result.data.Items);
     }
   };

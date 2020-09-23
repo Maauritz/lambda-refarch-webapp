@@ -1,6 +1,7 @@
 import React from 'react'
 import ContentEditable from 'react-contenteditable'
 import {Row, Col, Button } from 'reactstrap';
+import ToDo from './ToDo';
 class ProductRow extends React.Component {
   constructor(props) {
     super()
@@ -26,7 +27,7 @@ class ProductRow extends React.Component {
                   </h4>
               </Row>
               
-              {Object.entries(this.state.item).map(([value, index]) => {
+              {Object.entries(this.state.item).sort((a,b) => {return (a[0]).localeCompare(b[0])}).map(([value, index]) => {
                       return (
                         <Row xs="2" sm="3" className={this.state.item.completed ? 'completed' : ''} style={{display: 'flex', flexDirection: 'row'}}>
                           <Col xs='5'>
